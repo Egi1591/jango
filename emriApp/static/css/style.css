@@ -1,0 +1,24 @@
+.buttonsearch { 
+    background-color: red;
+    color:white
+   }
+   .about{
+    width: 400px;
+    height: 400px;
+    margin: 20px auto;
+    float: right;
+   }
+/* .object-fit {
+    responsive: true,
+    property object-fit,
+      cover: cover,
+      fill: fill,
+      scale: scale-down,
+      none: none,
+      autoplay:autoplay
+    } 
+     */
+.card img{
+    height: 200px;
+    width:200px;
+}
