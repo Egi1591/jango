@@ -45,23 +45,26 @@ fund carousel -->
 <!-- nis seksioni 2 -->
 <div class="container">
 <div class="row">
+  {% for item in items %}
 <div class="col-12 col-md-6 col-lg-3 mt-2 mt-1-lg-5">
  <div class="card" >
-   <img src="image/Screenshot_20240703_160405_Instagram.jpg" class="card-img-top test" alt="...">
+   <img src={{item.item_image.url}} class="card-img-top test" alt="...">
    <div class="card-body">
-     <h5 class="card-title">HYUNDAI TUCSON <i class="fa-regular fa-heart heart"></i></h5>
-     <p class="card-text">Hyundai Tucson</p>
+     <h5 class="card-title">{{item.item_name}} <i class="fa-regular fa-heart heart"></i></h5>
+     <p class="card-text">{{item.item_description}}</p>
      <ul>
-       <li>1,6</li>
-       <li>Automat</li>
-       <li>Nafte</li>
-       <li>2023</li>
+       <li>{{item.item_motorri}}</li>
+       <li>{{item.item_lloji}}</li>
+       <li>{{item.item_karburanti}}</li>
+       <li>{{item.item_vitiprodhimit}}</li>
      </ul>
+     
      <a href="#" class="btn btn-primary">Rent Now</a>
    </div>
  </div>
 </div>
-<div class="col-12 col-md-6 col-lg-3 mt-2 mt-1-lg-5">
+{% endfor %}
+<!-- <div class="col-12 col-md-6 col-lg-3 mt-2 mt-1-lg-5">
  <div class="card" >
    <img src="image/hyundaituscon23.jpg" class="card-img-top test" alt="...">
    <div class="card-body">
@@ -158,7 +161,7 @@ fund carousel -->
    <a href="#" class="btn btn-primary">Rent Now</a>
  </div>
 </div>
-</div> <!--col-->
+</div>  -->
 
 </div> <!--i rreshti row-->
 </div> <!--i container-->
