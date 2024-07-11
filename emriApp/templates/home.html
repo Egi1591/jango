@@ -59,7 +59,8 @@ fund carousel -->
        <li>{{item.item_vitiprodhimit}}</li>
      </ul>
      
-     <a href="#" class="btn btn-primary">Rent Now</a>
+     <a href="{% url 'detailitemPage' item.pk %}" class="btn btn-primary">Rent Now</a>
+
    </div>
  </div>
 </div>

@@ -1,0 +1,29 @@
+{% extends 'index.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+    <div class ="row">
+        <div class="col">
+            <img src="{{itemDetail.item_image.url}}" alt="" class="img-fluid">
+        </div>
+        <div class="col">
+            <h1>{{itemDetail.item_name}}</h1>
+            <p>{{itemDetail.item_description}}</p>
+            <p>{{itemDetail.item_name}}</p>
+            <p>{{itemDetail.item_decription}}</p>
+            <p>{{itemDetail.item_motorri}}</p>
+            <p>{{itemDetail.item_lloji}}</p>
+            <p>{{itemDetail.item_karburanti}}</p>
+            <p>{{itemDetail.item_vitiprodhimit}}</p>
+            
+
+
+        </div>
+
+
+    </div>
+</div>
+{% endblock %}
