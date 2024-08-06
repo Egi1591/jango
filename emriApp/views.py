@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from.models import *
+from django.contrib import messages
 # Create your views here.
 
 def home(request): 
@@ -30,12 +31,29 @@ def detailCategory(request, slug):
     return render(request,  'detailCategory.html', context)
 
 def contact(request):
-    categories=Category.objects.all()
-    context={"categories": categories}
-    if request.methot=="POST":
-        name = request.POST ["firstName"]
-        surname = request.POST ["surtName"]
-        email = request.POST ["email"]
+    categories = Category.objects.all()
+    if request.method == "POST":
+        name = request.POST["firstName"]
+        surname = request.POST["lastName"]
+        email= request.POST["email"]
+        comment = request.POST["comment"]
+        if name !="" and surname !="" and email !="" and comment != "":
+            Contact(
+            contact_name = name,
+            contact_surname = surname,
+            contact_email = email,
+            contact_description = comment
+        ).save()
+            messages.success(request, 'Message sended!!!')
+        else:
+            messages.error(request, 'Message not sended!!!')
+        Contact(
+            contact_name = name,
+            contact_surname = surname,
+            contact_email = email,
+            contact_description = comment
+        ).save()
         
-
-    return render(request, 'contact.html', context)
+        
+    context = {"categories":categories}
+    return render(request,  'contact.html', context)
