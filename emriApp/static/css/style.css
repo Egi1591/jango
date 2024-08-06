@@ -1,27 +1,24 @@
 .buttonsearch { 
-    background-color: red;
-    color:white
-   }
-   .about{
-    width: 400px;
-    height: 400px;
-    margin: 20px auto;
-    float: right;
-   }
-/* .object-fit {
-    responsive: true,
-    property object-fit,
-      cover: cover,
-      fill: fill,
-      scale: scale-down,
-      none: none,
-      autoplay:autoplay
-    } 
-     */
+  background-color: red;
+  color:white
+ }
+ .about{
+  width: 400px;
+  height: 400px;
+  margin: 20px auto;
+
+ }
+
+  
 .card img{
-    height: 200px;
-    width:200px;
+  height: 200px;
+  width:100%;
 }
 
+video{
+  width:100%
+}
 
-/* .object-fitored )`` */
+footer{
+  height: 150px;
+}

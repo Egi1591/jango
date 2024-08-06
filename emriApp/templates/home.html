@@ -3,43 +3,23 @@
 {% block content %}
 
  <!-- Nis carousel -->
- <video src="{% static 'image/Dark Violet Cyan Orange White Shapes and Widgets YouTube Intro.mp4' %}" autoplay loop muted class="object-fit-contain" autoplay></video>
+ <video src="{% static 'images/Dark Violet Cyan Orange White Shapes and Widgets YouTube Intro.mp4' %}" autoplay loop muted class="object-fit-contain" autoplay></video>
       
- <!-- <div class="carousel-inner">
-   <div class="carousel-item active">
-     <img src="image/aclass.jpg" class="d-block w-100" alt="...">
-   </div>
-   <div class="carousel-item">
-     <img src="image/hyundaituscon23.jpg" class="d-block w-100" alt="...">
-   </div>
-   <div class="carousel-item">
-     <img src="image/jetta.jpg" class="d-block w-100" alt="...">
-   </div>
- </div>
- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-   <span class="visually-hidden">Previous</span>
- </button>
- <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-   <span class="carousel-control-next-icon" aria-hidden="true"></span>
-   <span class="visually-hidden">Next</span>
- </button>
-</div>
-fund carousel -->
  <h1 class="text-center mt-5 pt-5 display-1">Makina me Qera</h1>
 
- <div class="container-fluid">
+ <div class="container-fluid my-5">
      <div class="row">
-         <div class="col-6">
-             <img src="{% static 'images/Screenshot_20240703_164945_Instagram.jpg' %}" class="about" alt="">
+         <div class="col-6  text-center">
+             <img src="{% static 'images/Screenshot_20240703_164945_Instagram.jpg ' %}" class="about" alt="">
          </div>
          <div class="col-6">
              <h2>About Us</h2>
-             <p>LE-AN ALBANIA_Makina me Qera eshte nje rental i nisur qe ne vitin 2019 e vazhdon ende sot. Nen sloganin " ENJOYABLE LIFE EXPERIENCES" kjo kompani eshte gjithmone prane cdo klienti qe ka nevoje per nje makine me qera. Kompania jone ofron cmimet me te mira e te lira ne treg, kualitet, gatishmeri per ta sjelle makinen kudo ,Tirane, RInas apo kudo dhe ne cdo ore. E gjendur lehtesisht ne rrugen Myslym Shyri prane Maxoptika ,perballe Okaidit ose ne cdo rrjet social si Instagram,Facebook, Whatsapp, Youtube, Linkedin ,Tiktok etj. Mund te na kontaktoni ne rrjetet tona sociale, ne adresen e emil : albania.lean@gmail.com ose ne numrin e cel : 068 804 5315</p> 
-             <a href="about.html">Learn more</a>
+             <p>LE-AN ALBANIA_Makina me Qera eshte nje rental i nisur qe ne vitin 2019 e vazhdon ende sot.Nen sloganin " ENJOYABLE LIFE EXPERIENCES" kjo kompani eshte gjithmone prane cdo klienti qe ka nevoje per nje makine me qera. Kompania jone ofron cmimet me te mira e te lira ne treg, kualitet, gatishmeri per ta sjelle makinen kudo ,Tirane, RInas apo kudo dhe ne cdo ore. E gjendur lehtesisht ne rrugen Myslym Shyri prane Maxoptika ,perballe Okaidit ose ne cdo rrjet social si Instagram,Facebook, Whatsapp, Youtube, Linkedin ,Tiktok etj. Mund te na kontaktoni ne rrjetet tona sociale, ne adresen e emil : albania.lean@gmail.com ose ne numrin e cel : 068 804 5315</p> 
+             <a href="{% url 'aboutPage' %}" class="btn buttonsearch">Learn more</a>
              </div>
  
  </div>
+
  <!-- nis seksion1 -->
 <!-- fund seksioni1 -->
 <!-- nis seksioni 2 -->
@@ -59,7 +39,7 @@ fund carousel -->
        <li>{{item.item_vitiprodhimit}}</li>
      </ul>
      
-     <a href="{% url 'detailitemPage' item.pk %}" class="btn btn-primary">Rent Now</a>
+     <a href="{% url 'detailitemPage' item.pk %}" class="btn btn-danger">Rent Now</a>
 
    </div>
  </div>
